@@ -17,3 +17,9 @@ export const addUser = async (data: UserDoc) => {
   }
   revalidatePath("/ACADEMY/LOGIN");
 };
+
+export const getProduct = async () => {
+  const res = await fetch("http://localhost:3000/api/products");
+
+  return res.json();
+};
