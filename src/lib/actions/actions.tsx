@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache";
 import Users, { UserDoc } from "../models/model";
+import { Product } from "@/api/products/db";
 
 export const addUser = async (data: UserDoc) => {
   try {
@@ -18,8 +19,16 @@ export const addUser = async (data: UserDoc) => {
   revalidatePath("/ACADEMY/LOGIN");
 };
 
-export const getProduct = async () => {
+export const getProducts = async () => {
   const res = await fetch("http://localhost:3000/api/products");
 
   return res.json();
+};
+export const getProduct = async (id: number) => {
+  const res = await fetch("http://localhost:3000/api/products");
+  const data: Product[] = await res.json();
+
+  const item = data.find((i) => (i.id = id));
+  console.log(item);
+  return item;
 };

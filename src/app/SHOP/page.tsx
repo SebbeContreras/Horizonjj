@@ -1,18 +1,25 @@
-import { getProduct } from "../../lib/actions/actions";
+import { Product } from "@/api/products/db";
+import { getProducts } from "../../lib/actions/actions";
+import ProductCard from "../../lib/components/productCard";
 
 export default async function Home() {
-  const data = await getProduct();
-  console.log(data);
+  const data: Product[] = await getProducts();
   return (
     <main>
       <h1>SHOP</h1>
       <div>
         <h1>List of Items</h1>
-        <ul>
-          {data.map((item) => (
-            <li key={item.id}>{item.name}</li>
-          ))}
-        </ul>
+
+        {data.map((item) => (
+          <ProductCard
+            key={item.id}
+            product={item.id}
+            name={item.name}
+            description={item.description}
+            img={item.img}
+            price={item.price}
+          />
+        ))}
       </div>
     </main>
   );
