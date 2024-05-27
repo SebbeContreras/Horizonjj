@@ -1,4 +1,4 @@
-import mongoose, { Document, ObjectId, Schema, model, models } from "mongoose";
+import mongoose, { Document, Schema } from "mongoose";
 
 export interface UserDoc extends Document {
   email: string;
@@ -33,7 +33,6 @@ const userSchema: Schema = new Schema(
   },
   { timestamps: true }
 );
-
 const User =
   mongoose.models.users || mongoose.model<UserDoc>("users", userSchema);
 

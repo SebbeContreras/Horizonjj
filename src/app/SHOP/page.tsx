@@ -1,15 +1,14 @@
 import { Product } from "@/api/products/db";
 import { getProducts } from "../../lib/actions/actions";
 import ProductCard from "../../lib/components/productCard";
+import styles from "../SHOP/page.module.css";
 
 export default async function Home() {
   const data: Product[] = await getProducts();
   return (
     <main>
-      <h1>SHOP</h1>
-      <div>
-        <h1>List of Items</h1>
-
+      <h1 className={styles.shop__header}>SHOP</h1>
+      <div className={styles.shop__container}>
         {data.map((item) => (
           <ProductCard
             key={item.id}
@@ -18,6 +17,7 @@ export default async function Home() {
             description={item.description}
             img={item.img}
             price={item.price}
+            id={item.id}
           />
         ))}
       </div>

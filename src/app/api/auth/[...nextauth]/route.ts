@@ -1,15 +1,15 @@
 import nextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import User from "../../../../lib/models/model";
+import User from "../../../../lib/models/userModel";
 
 const handler = nextAuth({
   session: {
     strategy: "jwt",
   },
   pages: {
-    signIn: "/ACADEMY/LOGIN",
+    signIn: "/LOGIN",
     signOut: "/",
-    error: "/ACADEMY/LOGIN",
+    error: "/LOGIN",
   },
   secret: process.env.NEXTAUTH_SECRET,
   providers: [
@@ -21,6 +21,8 @@ const handler = nextAuth({
       },
       async authorize(credentials, req): Promise<any> {
         const user = await User.findOne({ email: credentials?.email });
+        console.log(user);
+
         if (!user) throw new Error("email does not exist.");
         if (user.password !== credentials?.password) return null;
         return user;

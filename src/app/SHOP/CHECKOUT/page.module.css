@@ -1,0 +1,23 @@
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5em auto;
+  padding: 2rem;
+  box-shadow: 0 0em 1em #d7d5d5;
+  width: 50rem;
+  border-radius: 1rem;
+}
+
+.checkout__list {
+  list-style: none;
+}
+.checkout__item {
+  margin: 1.5em 0;
+  gap: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}

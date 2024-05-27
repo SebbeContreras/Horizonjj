@@ -1,3 +1,16 @@
+.shop__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.shop__header {
+  text-align: center;
+}
+
 .cart {
   display: flex;
   position: relative;
@@ -11,20 +24,21 @@
 }
 .cart__display {
   display: flex;
+  flex-direction: column;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  width: min-content;
 }
 .cart__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 2em;
-  top: 0;
-  width: max-content;
+  width: 20rem;
   border-bottom: 1px gray solid;
   gap: 0.5rem;
+  background-color: white;
+  padding: 0.5rem 0;
 }
 
 .cart__list {

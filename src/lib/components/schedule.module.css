@@ -1,0 +1,26 @@
+.schedule {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  border: 1px solid gray;
+  width: 80%;
+  margin-inline: auto;
+  background-color: gray;
+}
+.schedule__day {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: 1px solid;
+}
+.schedule__title,
+.schedule__training {
+  padding: 1rem 0;
+  background-color: whitesmoke;
+  width: inherit;
+  text-align: center;
+  border-bottom: 1px solid gray;
+}
+.schedule__training {
+  background-color: white;
+}

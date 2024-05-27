@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth";
 import SignIn from "../../../lib/components/signIn";
 import { redirect } from "next/navigation";
+import style from "../page.module.css";
 
 export default async function LoginPage() {
   const session = await getServerSession();
@@ -8,8 +9,8 @@ export default async function LoginPage() {
     redirect("/");
   }
   return (
-    <>
+    <main className={style.academy__main}>
       <SignIn />
-    </>
+    </main>
   );
 }

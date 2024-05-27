@@ -1,6 +1,6 @@
 import { Product } from "@/api/products/db";
 import { getProduct, getProducts } from "../../../lib/actions/actions";
-import AddCartItem from "../../../lib/components/addCartItem";
+import AddCartServer from "../../../lib/components/addCartServer";
 
 export async function generateStaticParams() {
   const data: Product[] = await getProducts();
@@ -17,13 +17,17 @@ export default async function ProductPage({
 }) {
   const { id } = params;
   const data: Product | undefined = await getProduct(id);
+
   return (
     <main>
       <h1>{data!.name}</h1>
-      <h2>{data!.price}</h2>
+      <h2>{data!.price}SEK</h2>
       <p>Beskrivning: {data!.description}</p>
       <p>Status: {data!.stock}</p>
-      <AddCartItem name={data!.name} img={data!.img} price={data!.price} />
+      {
+        //<AddCartItem cartId={data!.name} img={data!.img} price={data!.price} />
+      }
+      {<AddCartServer cartId={data!.id} />}
     </main>
   );
 }

@@ -1,0 +1,32 @@
+.Blimedlem,
+.Omoss,
+.Schema {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 449px;
+  width: 100%;
+  background-size: cover;
+}
+.hero_img__title {
+  font-size: 1.875em;
+}
+.Omoss {
+  background-image: url("../img/Bjj_bild2.jpg");
+}
+.Schema {
+  background-image: url("../img/tredjebilden_1.jpg");
+}
+.Blimedlem {
+  background-image: url("../img/Bjj_bild1.jpg");
+}
+.btn {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 20px 35px;
+  background-color: #000000;
+  text-align: center;
+  color: whitesmoke;
+  cursor: pointer;
+}

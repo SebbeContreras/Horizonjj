@@ -1,0 +1,54 @@
+.academy__main {
+  width: 80%;
+  margin-inline: auto;
+  margin-top: 5rem;
+}
+.form__box {
+  width: min-content;
+  margin-inline: auto;
+}
+.form__box a {
+  text-decoration: underline;
+}
+.menu {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.menu__p {
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown__list {
+  list-style: none;
+  padding: unset;
+  margin-top: unset;
+}
+
+.dropdown__item {
+  padding: 14px;
+  transition: all linear 0.3s;
+}
+
+.dropdown__menu {
+  background: #fff;
+  box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.05);
+  transition: all linear 0.3s;
+  margin-top: 6.62em;
+}
+.event__card {
+  border: solid 0.5em #ffff;
+  width: 25rem;
+  box-shadow: 0 0em 1em #d7d5d5;
+  padding: 2rem;
+}
+.event__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

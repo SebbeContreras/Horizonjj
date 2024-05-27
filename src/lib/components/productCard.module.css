@@ -1,0 +1,14 @@
+.product__card {
+  border: solid 0.5em #ffff;
+  width: min-content;
+  box-shadow: 0 0em 1em #d7d5d5;
+}
+.product__info {
+  padding-left: 1em;
+}
+.product__form {
+  margin: 1rem 0.2rem;
+}
+.shop__header {
+  text-align: center;
+}

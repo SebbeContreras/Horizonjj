@@ -1,7 +1,7 @@
 "use client";
 
 import { addUser } from "../actions/actions";
-import { UserDoc } from "../models/model";
+import { UserDoc } from "../models/userModel";
 
 function SignUp() {
   async function handleSignUp(formData: FormData) {
@@ -17,11 +17,19 @@ function SignUp() {
 
   return (
     <>
-      <form action={handleSignUp}>
-        <input type="text" name="firstname" placeholder="firstname" />
-        <input type="text" name="lastname" placeholder="lastname" />
-        <input type="text" name="email" placeholder="email" />
-        <input type="password" name="password" placeholder="password" />
+      <form action={handleSignUp} className="register__form">
+        <span>
+          <label htmlFor="firstname"> Förnamn: </label>
+          <input type="text" name="firstname" placeholder="Förnamn" />
+          <label htmlFor="Lastname"> Efternamn: </label>
+          <input type="text" name="lastname" placeholder="Efternamn" />
+        </span>
+        <span>
+          <label htmlFor="Email"> Mejladress: </label>
+          <input type="text" name="email" placeholder="Mejladress" />
+          <label htmlFor="Password"> Lösenord: </label>
+          <input type="password" name="password" placeholder="Lösenord" />
+        </span>
         <button type="submit">Register</button>
       </form>
     </>

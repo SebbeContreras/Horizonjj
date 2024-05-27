@@ -1,0 +1,5 @@
+.event__card {
+  border: solid 0.5em #ffff;
+  width: min-content;
+  box-shadow: 0 0em 1em #d7d5d5;
+}
